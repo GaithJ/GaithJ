@@ -1,0 +1,52 @@
+<div class="container">
+
+  <h1>Ma Liste</h1>
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Marque</th>
+            <th>Modele</th>
+            <th>N°ser</th>
+            <th>Fournisseur</th>
+            <th>Mser</th>
+            <th>Origine</th>
+            <th>Service </th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let equipement of equipements">
+          <tr>
+            <td>{{equipement.NInv }}</td>
+            <td>{{equipement.Nom}}</td>
+            <td>{{equipement.Marque}}</td>
+            <td>{{equipement.Modele}}</td>
+            <td>{{equipement.Nserie}}</td>
+            <td>{{equipement.Fournisseur }}</td>
+            <td>{{equipement.Mser | date:'dd/MM/yyyy' }}</td>
+            <td>{{equipement.Origine }}</td>
+            <td>{{equipement.service}}</td>
+
+            
+            
+            
+           
+           
+           
+
+            <td><a class="btn btn-danger" (click)="deleteequipement(equipement.NInv)" >Supprimer</a></td>
+        <td> <a class="btn btn-success" [routerLink]="['/updateEquipement',equipement.NInv ]">Modifier</a> </td> 
+             
+
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+   
+  </div>
+  
+</div>

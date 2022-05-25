@@ -1,0 +1,65 @@
+<div class="container">
+    <div>
+    <h2>Modifier un Equipement :</h2>
+    </div>
+    <form>
+      <div class="formulair">
+        <div class="f1">
+          <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >NInv Equipement  </label>
+        <input type="number" [(ngModel)]="currentEquipement[0].NInv" name="nInvEquipement" class="form-control">
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Famille Equipement </label>
+        <input type="text"[(ngModel)]= "currentEquipement[0].Famille" name="familleEquipement" class="form-control">
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Nom Equipement </label>
+        <input type="texte" [(ngModel)]= "currentEquipement[0].Nom" name="nomEquipement" class="form-control">
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Marque Equipement </label>
+        <input type="texte" [(ngModel)]= "currentEquipement[0].Marque" name="marqueEquipement" class="form-control">
+          </div>
+         <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Modele Equipement </label>
+            <input type="text"[(ngModel)]= "currentEquipement[0].Modele" name="modeleEquipement" class="form-control">
+         </div>
+        </div>
+        <div class="f2">
+
+        <div class="col-sm-4 col-md-4 col-lg-4" >   
+            <label >Nserie  Equipement </label>
+            <input type="number"[(ngModel)]= "currentEquipement[0].Nserie " name="nserie Equipement" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >   
+            <label >Fournisseur  Equipement </label>
+            <input type="text"[(ngModel)]= "currentEquipement[0].Fournisseur " name="fournisseur Equipement" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >   
+            <label >Mser  Equipement </label>
+            <input type="date"[(ngModel)]= "currentEquipement[0].Mser " name="mser Equipement" class="form-control">
+        </div>
+       
+        <div class="col-sm-4 col-md-4 col-lg-4" >   
+            <label >Origine Equipement </label>
+            <input type="text"[(ngModel)]= "currentEquipement[0].Origine " name="origine Equipement" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <label>service </label>
+          <select name ="nomservice" [(ngModel)]="selectedValue"   #nomservice="ngModel" [(ngModel)]="currentEquipement[0].service" >
+            <option  *ngFor="let a of service" [ngValue]="a.nomservice" >{{a.nomservice}}</option>
+        </select>
+        </div>
+        <div class="mt-2">
+          <button type="submit" (click) = "updateequipement()" class="btn btn-success">Modifier</button>  
+        
+        </div>
+        
+      </div>
+    </div>
+        </form>
+      
+    </div>
+
+

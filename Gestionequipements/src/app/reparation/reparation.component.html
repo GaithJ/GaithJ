@@ -1,0 +1,62 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <div id="demo" class="row">
+        <h5>HOPITAL UNIVERSITAIRE .......... </h5>
+        <h6>Direction Technique </h6>
+        <div class="titre">  <h5>Date  </h5>  <input id="date" type="date" [(ngModel)]="Newreparation.date">
+
+        </div>
+       
+        <div class="col-md-5 ">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">TELEFAX MESSAGE   </h4>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-right"><strong>DE LA PART : </strong>DIRECTEUR GENERAL DE L'HOPITAL  </h6>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-right"><strong> DESTINATAIRE : </strong>DIRECTEUR TECHNIQUE   </h6>
+                   
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    
+                    <h6 class="text-right"><strong>  </strong>FAX N° : 73 102 506 / 73 229 741  </h6>
+                </div>
+            
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-right"><strong> OBJET : </strong>INTERVENTION DE REPARATION   </h6>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-left"><strong> TEXTE : </strong> <p>J'ai l'honneur de vous prier de bien vouloir charger vos services compétents pour intervenir d'urgence pour la remise en bon état de fonctionnement de l'appareil </p> </h6> 
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Equipement</label>
+                    <input type="text"[(ngModel)]="Newreparation.dispositif" class="form-control" placeholder="equipement" value="" ></div>
+                    <div class="col-md-6"><label class="labels">Marque </label><input type="text" [(ngModel)]="Newreparation.marque"class="form-control" value="" placeholder="marque"></div>
+                    <div class="col-md-6"><label class="labels">Modele</label><input type="text" [(ngModel)]="Newreparation.modele"class="form-control" placeholder="modele " value=""></div>
+                    <div class="col-md-6"><label class="labels">Num°serie</label><input type="text" [(ngModel)]="Newreparation.numserie "class="form-control" placeholder="num°serie" value=""></div>
+                    <div class="col-md-6"><label class="labels">Service affecté</label><input type="text"[(ngModel)]="Newreparation.seraffecte" class="form-control" placeholder="service affecté" value=""></div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Qui présente les anomalies suivantes  </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-left"> Dans l'attente d'une procédure rapide ,veuillez agréer ,Monsieur mes salutations distinguées. </h6>
+                </div>
+               
+                <button (click)=" addrep()" class="btn btn-success"  >Enregistrer</button>
+                
+            </div>
+        </div>
+        <div class="titre"><h5>Direction Technique </h5>
+        </div>
+        
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,53 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <h5>HOPITAL UNIVERSITAIRE .......... </h5>
+        <h6>Direction Technique </h6>
+        <div class="titre">  <h5>Date  </h5>  <input id="date" type="date" >
+
+    </div>
+       
+        <div class="col-md-5 ">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">TELEFAX MESSAGE   </h4>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-right"><strong>DE LA PART : </strong>DIRECTEUR GENERAL DE L'HOPITAL  </h6>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-right"><strong> DESTINATAIRE : </strong>DIRECTEUR TECHNIQUE   </h6>
+                   
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    
+                    <h6 class="text-right"><strong>  </strong>FAX N° : 73 102 506 / 73 229 741  </h6>
+                </div>
+            
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-right"><strong> OBJET : </strong>Demande de devis  </h6>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-left"><strong> TEXTE : </strong> 
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">J'ai l'honneur de vous prier de bien vouloir nous fournir un devis concernant  </label>
+                            <textarea class="form-control"[(ngModel)]="Newdevis.texte" id="exampleFormControlTextarea1" rows="3"></textarea>
+        
+                          </div></h6> 
+                </div>
+                
+                
+                
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-left"> Dans l'attente d'une procédure rapide ,veuillez agréer ,Monsieur mes salutations distinguées. </h6>
+                </div>
+               
+                <button (click)=" adddevis()" class="btn btn-success"  >Enregistrer</button>
+            </div>
+        </div>
+        <div class="titre"><h5>Direction Technique </h5>
+        </div>
+        
+    </div>
+</div>

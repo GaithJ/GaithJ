@@ -1,0 +1,51 @@
+import { ThisReceiver } from "@angular/compiler";
+
+export class intervention {
+    Numdemande:number;
+    Numintervention:number;
+    Dureeintervention:number;
+    Techniciensintervenants:string;
+    Equipement:string;
+    Marque:string;
+    Modele:string;
+    Numserie:number;
+    serviceaffecter:string;
+    DefautConstater:string;
+    Compterendu:string;
+    Observations:string;
+    Designation:string;
+    Quantite:string;
+    Dateremiseenservice:Date;
+  
+         constructor(Numdemande:number,
+        Numintervention:number,
+        Dureeintervention:number,
+        Techniciensintervenants:string,
+        Equipement:string,
+        Marque:string,
+        Modele:string,
+        Numserie:number,
+        serviceaffecter:string,
+        DefautConstater:string,
+        Compterendu:string,
+        Observations:string,
+        Designation:string,
+        Quantite:string,
+        Dateremiseenservice:Date){
+            this.Numdemande=Numdemande
+            this.Numintervention=Numintervention
+            this.Dureeintervention=Dureeintervention
+            this.Techniciensintervenants=Techniciensintervenants
+            this.Equipement=Equipement
+            this.Marque=Marque
+            this.Modele=Modele
+            this.Numserie=Numserie
+            this.serviceaffecter=serviceaffecter
+            this.DefautConstater=DefautConstater
+            this.Compterendu=Compterendu
+            this.Observations=Observations
+            this.Designation=Designation
+            this.Quantite=Quantite
+            this.Dateremiseenservice=Dateremiseenservice
+        }
+}

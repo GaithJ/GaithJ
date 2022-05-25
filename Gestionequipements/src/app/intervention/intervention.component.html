@@ -1,0 +1,67 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="col-md-6"><label class="labels">N°demnade de travaux </label><input type="number"[(ngModel)]="Newintervention.Numdemande"  class="form-control" value="" placeholder="numéro"></div>
+            <div class="col-md-6"><label class="labels">Num Intervention  </label><input type="number"[(ngModel)]="Newintervention.Numintervention" class="form-control" value="" placeholder="numéro"></div>
+            <div class="col-md-6"><label class="labels">Durée d'intervention  </label><input type="text" [(ngModel)]="Newintervention.Dureeintervention"class="form-control" placeholder="durée " value=""></div> 
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Fiche d'intervention </h4>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Techniciens Intervenants</label><input type="text"[(ngModel)]="Newintervention.Techniciensintervenants" class="form-control" placeholder="enter phone number" value=""></div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Equipement</label><input type="text"[(ngModel)]="Newintervention.Equipement"  class="form-control" placeholder="equipement" value=""></div>
+                    <div class="col-md-6"><label class="labels">Marque </label><input type="text"[(ngModel)]="Newintervention. Marque"  class="form-control" value="" placeholder="marque"></div>
+                    <div class="col-md-6"><label class="labels">Modele</label><input type="text" [(ngModel)]="Newintervention. Modele"  class="form-control" placeholder="modele " value=""></div>
+                    <div class="col-md-6"><label class="labels">Num°serie</label><input type="text"[(ngModel)]="Newintervention. Numserie" class="form-control" placeholder="num°serie" value=""></div>
+                    <div class="col-md-6"><label class="labels">Service affecté</label><input type="text"[(ngModel)]="Newintervention. serviceaffecter" class="form-control" placeholder="service affecté" value=""></div>
+                </div>
+                <div class="form-group">
+                    <label [(ngModel)]="Newintervention.DefautConstater"for="exampleFormControlTextarea1">Défaut Constaté </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label [(ngModel)]="Newintervention.Compterendu"for="exampleFormControlTextarea1">Compte-rendu des travaux </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label [(ngModel)]="Newintervention.Observations"for="exampleFormControlTextarea1">Observations</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  
+
+               
+               
+                  <button (click)=" addintervention()" class="btn btn-success"  >Enregistrer</button>
+                  <div>
+
+                    <h3> {{message}} </h3>
+                  </div>
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-right">PIECES REMPLACEES </h6>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Désignation </label><input type="text" [(ngModel)]="Newintervention.Designation" class="form-control" placeholder="désignation " value=""></div>
+                    <div class="col-md-6"><label class="labels">Quantité</label><input type="number" [(ngModel)]="Newintervention.Quantite"class="form-control" value="" placeholder="marque"></div>
+                   
+                    <label for="start">Date remise en service </label>
+                    <input id="date" type="date" [(ngModel)]="Newintervention.Dateremiseenservice">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,111 @@
+#logo {
+  height: 70px;
+}
+
+.Utilisateur {
+  margin-top: 10px;
+  width: 0%;
+}
+
+.dropbtn {
+
+  background-color: rgba(10, 10, 207, 0.7);
+  color: #fff;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  float: right;
+}
+
+li img {
+  position: relative;
+  left: 900px;
+
+}
+
+.dropdown {
+  position: relative;
+  float: right;
+}
+
+.nav-link {
+  font-family: 'poppins';
+  color: #fff;
+  padding: 20px;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: blue;
+}
+
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 60px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(17, 17, 216);
+  float: right;
+}
+
+.navbar-brand {
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.gay {
+  background-color: rgb(17, 17, 216);
+  color: white;
+  position: relative;
+  border: none;
+  margin-bottom: 40px;
+  margin-left: 30px;
+
+
+}
+
+.navbar {
+  background-color: rgba(10, 10, 207, 0.7);
+}
+
+.navbar-nav {
+  display: flex !important;
+}
+
+.left,
+.right {
+  display: flex !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.left {
+  float: left !important;
+  width: 1050px;
+}

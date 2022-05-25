@@ -1,0 +1,163 @@
+
+
+img{
+    height: 400px;
+    width:auto;
+}
+.card{
+    background-color: white;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1,1,1,15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    
+    
+    
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.7s ease;
+}
+.icon{
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+color: #3a6cf4;
+font-size: 1.2em;
+font-weight: 700;
+margin: 10px;
+}
+.projects{
+    background-color: #000016;
+}
+.projects .content{
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+}
+.project-card{
+    background-color: white;
+    border: 1px solid white;
+    min-height: 12em;
+    width: 17em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-card:hover .project-image{
+    opacity: 0.9;
+}
+.project-image img{
+width: 100%;
+}
+.project-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 0.8em;
+    color: black;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;}
+    .title{
+        display: flex;
+        justify-content: center;
+        color: #3a6cf4;
+        font-size: 2.2em;
+        font-weight: 800;
+        margin-bottom: 30px;
+        right: 250px;
+        text-align: center;
+        padding: 5px 0px;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;}
+    .card{
+        border: solid;
+        border-color:rgb(150, 159, 176)
+    }
+   
+        
+    #contenu{
+        border: 1px solid #3a6cf4;
+        background: white;
+        padding: 10px ; margin: 10px;
+        min-height: 100px;
+
+    }
+    #left{
+        margin-left: 40px;
+        background-color: white;
+        width: 500px;
+        min-height: 300px;
+        float: left;
+    }
+    #right{
+        border:none;
+        background: white;
+        min-height: 290px;
+        margin-left: 400px;
+        overflow: auto;
+        padding: auto;
+        margin-left: 70px;
+
+
+    }
+    
+ul{
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+}
+li{
+  padding-left: 16px;
+}
+li::before{
+  content: "+" ;
+  padding-right: 8px;
+  color: rgb(59, 233, 77);
+}
+mark{
+    color:#630eb9 ;
+    background-color: white;
+}
+h1{
+    color: #3a6cf4;
+}
+ul li{
+    font-size: 20px;
+    font-family: 'poppins';
+    font-weight: bold;
+    
+    
+    
+
+}
+ul li span{
+    font-family: 'poppins';
+    font-weight:lighter;
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+.cards {
+    background-color: #eee;
+}
+   
+  
