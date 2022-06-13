@@ -28,11 +28,9 @@ export class EquipementService {
   equipements!: equipement[];
   equipement: any;
   
-  // categories: Categorie[] = []
-  // categorie: any
 
-
-  nomCat: string | undefined
+ 
+  // nomCat: string | undefined
 
   url = 'http://localhost:3000/mylist'
   url1 = 'http://localhost:3000/service'
@@ -54,6 +52,14 @@ export class EquipementService {
     return this.http.get<equipement[]>(`${this.url}`)
 
   }
+  getallfiche(): Observable<intervention[]> {
+    return this.http.get<intervention[]>(`${this.url2}`)
+
+  }
+  getallfax():Observable<intervention[]> {
+    return this.http.get<intervention[]>(`${this.url2}`)
+
+  }
   getallser(): Observable<service[]> {
     return this.http.get<service[]>(`${this.url1}`)
   }
@@ -70,12 +76,11 @@ getbyid(id:number): Observable<equipement[]> {
   return this.http.get<equipement[]>(`${this.url}/${id}`)
 }
 getbyser(ser:string): Observable<equipement[]> {
-  return this.http.get<equipement[]>(`${this.url6}/${ser}`)
+  return this.http.get<equipement[]>(`${this.url6}`, )
 }
 updateequipement(data:equipement): Observable<equipement> {
   console.log('data : ',data);
-  
-  return this.http.put<equipement>(`${this.url}/${data.NInv}`,data,httpOptions)
+  return this.http.put<equipement>(`${this.url}/${data.id}`,data,httpOptions)
 }
 deleteequipement(id:number): Observable<equipement>{
   console.log
@@ -83,13 +88,11 @@ deleteequipement(id:number): Observable<equipement>{
 }
 getintervention(): Observable<intervention[]> {
   return this.http.get<intervention[]>(`${this.url2}`)
-
 }
 
-addintervention(data:intervention ): Observable<intervention[]> {
-  // console.log(data);
-  
-  return this.http.post<intervention[]>(`${this.url2}`, data, httpOptions)
+addintervention(data:intervention ): Observable<intervention[]> { 
+    //  console.log(data);
+  return this.http.post<intervention[]>(`${this.url2}`, data)
 }
 getdevis(): Observable<devis[]> {
   return this.http.get<devis[]>(`${this.url3}`)

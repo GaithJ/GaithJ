@@ -1,4 +1,6 @@
 <div class="container">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
   <div class="mt-4">
     <h2>Ajouter un équipement </h2>
   </div>
@@ -6,19 +8,20 @@
 
     <!-- <div class="formulair"> -->
       <div class="f1">
+       
         <div class="col-sm-4 col-md-4 col-lg-4">
-          <label>NInv Equipement</label>
-          <input type="number" [(ngModel)]="newEquipement.NInv"
-           name="nInvEquipement" class="form-control">
+          <label>NumInventaire Equipement</label>
+          <input type="text" [(ngModel)]="newEquipement.NumInventaire"
+           name="numInventaireEquipement" class="form-control">
         </div>
 
         <div class="col-sm-4 col-md-4 col-lg-4">
           <label>Famille Equipement</label>
-          <input type="text" [(ngModel)]="newEquipement.Famille" name="familleEquipement" class="form-control">
+          <input  type="text" [(ngModel)]="newEquipement.Famille" name="familleEquipement" class="form-control">
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
           <label>Nom Equipement</label>
-          <input type="text" [(ngModel)]="newEquipement.Nom" name="nomEquipement" class="form-control">
+          <input required type="text" [(ngModel)]="newEquipement.Nom" name="nomEquipement" class="form-control">
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
           <label>Marque Equipement</label>
@@ -32,7 +35,7 @@
       <div class="f2">
         <div class="col-sm-4 col-md-4 col-lg-4">
           <label>Nserie Equipement </label>
-          <input type="number" [(ngModel)]="newEquipement.Nserie " name="nserie Equipement" class="form-control">
+          <input type="text" [(ngModel)]="newEquipement.Nserie " name="nserie Equipement" class="form-control">
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
           <label>Fournisseur Equipement </label>
@@ -57,7 +60,7 @@
       </div>
       <div class="mt-2">
         
-        <button  class="btn btn-success"  >Ajouter</button>
+        <button  class="btn btn-success"><i class="fa-solid fa-circle-plus"></i>Ajouter</button>
 
         <div>
 

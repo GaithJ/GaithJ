@@ -26,12 +26,13 @@ export class UpdateEquipementComponent implements OnInit {
   ngOnInit(): void {
     this.getservice()
  
-    this.currentEquipement=[{NInv : 0,
+    this.currentEquipement=[{id : 0,
+      NumInventaire:'',
       Famille: '' ,
       Nom:'' ,
       Marque : '' ,
       Modele : '' ,
-      Nserie : 0 ,
+      Nserie : '' ,
       Fournisseur : '' ,
       Mser :new Date ,
       ModAcq : '' ,

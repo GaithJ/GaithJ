@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./equipement-par-service.component.css']
 })
 export class EquipementParServiceComponent implements OnInit {
+  getbyser: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.getbyser 
   }
+  
 
 }

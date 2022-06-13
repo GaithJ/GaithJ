@@ -10,20 +10,27 @@ import { EquipementService } from '../services/equipement.service';
 })
 export class InterventionComponent implements OnInit {
   Newintervention  = new intervention(0,0,0,'','','','',0,'','','','','','',new Date);
-  intervention: intervention[]| undefined;
-  message: string | undefined;
+  interventions: intervention []| undefined;
+  
+ 
   
 
   constructor(private equipementservice: EquipementService,private router:Router ) { }
 
   ngOnInit(): void {
-  // this.addintervention()
+    // this.addintervention
+    // console.log(this.addintervention)
+
   }
   addintervention(){   
-    return this.equipementservice.addintervention(this.Newintervention).subscribe(res=>{this.intervention=res 
-      this.router.navigate(['/accueil'])
-     }) }
-    
+      return this.equipementservice.addintervention(this.Newintervention).subscribe(res=>{
+     this.interventions=res ;
+     this.router.navigate(['/fiches'])
+     }) 
+  
+    }
   }
+
+  
 
 

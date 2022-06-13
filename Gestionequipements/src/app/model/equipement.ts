@@ -4,12 +4,13 @@ import { service } from "./service";
 
 
 export class equipement {
-NInv : number  ;
+    id:number;
+    NumInventaire: string  ;
 Famille: string ;
 Nom: string ;
 Marque : string ;
 Modele: string ;
-Nserie: number ;
+Nserie: string ;
 Fournisseur : string ; 
 Mser : Date ;
 ModAcq : string ;
@@ -19,20 +20,21 @@ service:string
 
 
   
-   constructor(NInv: number  ,
+   constructor(id:number,
+    NumInventaire: string  ,
     Famille: string ,
     Nom : string ,
     Marque: string ,
     Modele: string ,
-    Nserie: number ,
+    Nserie: string ,
     Fournisseur : string ,
     Mser: Date ,
     ModAcq : string ,
     Origine : string ,
      idCat:number ,
      service:string
-    ){
-        this.NInv=NInv;
+    ){ this.id=id;
+        this.NumInventaire=NumInventaire;
         this.Famille=Famille;
         this.Nom=Nom;
         this.Marque=Marque

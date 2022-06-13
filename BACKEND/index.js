@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-// const Connection = require("mysql/lib/Connection");
+const Connection = require("mysql/lib/Connection");
 const db = require("./db");
 const cors = require("cors");
 
@@ -14,15 +14,15 @@ app.get("/mylist", (req, res) => {
   });
 });
 app.get("/mylist/:id", (req, res) => {
-  let NInv = req.params.id;
-  let qr = `select * from mylist where NInv= ${NInv} `;
+  let id = req.params.id;
+  let qr = `select * from mylist where id= ${id} `;
   db.query(qr, (err, result) => {
     console.log(result);
     res.send(result);
   });
 });
-app.get(`/mylistbyservice/:"ser"`, (req, res) => {
-  let ser = req.params.ser;
+app.get(`/mylistbyservice`, (req, res) => {
+  let ser = req.body.ser;
   let qr = `select * from mylist where service = '${ser}'`;
   return new Promise((resolve, reject) => {
     db.query(qr, (err, result) => {
@@ -36,8 +36,8 @@ app.get(`/mylistbyservice/:"ser"`, (req, res) => {
   });
 });
 app.get("/mylist/:id", (req, res) => {
-  let NInv = req.params.id;
-  let qr = `select * from mylist where NInv= ${NInv} `;
+  let id = req.params.id;
+  let qr = `select * from mylist where id= ${id} `;
   db.query(qr, (err, result) => {
     console.log(result);
     res.send(result);
@@ -64,6 +64,7 @@ app.get("/service", async (req, res) => {
 
 app.post("/mylist", (req, res) => {
   console.log(req.body);
+  let NumInventaire =req.body.NumInventaire 
   let Famille = req.body.Famille;
   let Nom = req.body.Nom;
   let Marque = req.body.Marque;
@@ -73,8 +74,8 @@ app.post("/mylist", (req, res) => {
   let Mser = req.body.Mser;
   let Origine = req.body.Origine;
   let service = req.body.service;
-  let qr = `INSERT INTO mylist ( Famille, Nom, Marque, Modele, Nserie, Fournisseur, Mser,  Origine,service ) 
-    VALUES ('${Famille}','${Nom}','${Marque}','${Modele}','${Nserie}',
+  let qr = `INSERT INTO mylist (NumInventaire, Famille, Nom, Marque, Modele, Nserie, Fournisseur, Mser,  Origine,service ) 
+    VALUES ('${NumInventaire}','${Famille}','${Nom}','${Marque}','${Modele}','${Nserie}',
     '${Fournisseur}','${Mser}','${Origine}','${service}')`;
   db.query(qr, (err, result) => {
     console.log(result);
@@ -82,10 +83,12 @@ app.post("/mylist", (req, res) => {
   });
 });
 
-app.put("/mylist/:NInv", (req, res) => {
-  let NInv = req.params.NInv;
+app.put("/mylist/:id", (req, res) => {
+  let id= req.params.id;
   // console.log(req.body);
+  let NumInventaire=req.body.NumInventaire;
   let Famille = req.body.Famille;
+  
   let Nom = req.body.Nom;
   let Marque = req.body.Marque;
   let Modele = req.body.Modele;
@@ -95,7 +98,8 @@ app.put("/mylist/:NInv", (req, res) => {
  
   let Origine = req.body.Origine;
   let service = req.body.service;
-  let qr = `UPDATE mylist SET  Famille='${Famille}',
+  let qr = `UPDATE mylist SET  NumInventaire=${NumInventaire},
+                               Famille='${Famille}',
                               Nom='${Nom}',
                               Marque='${Marque}',
                               Modele='${Modele}',
@@ -105,7 +109,7 @@ app.put("/mylist/:NInv", (req, res) => {
                              
                               Origine='${Origine}',
                               service='${service}'
-                               WHERE NInv= ${NInv}`;
+                               WHERE id= ${id}`;
   db.query(qr, (err, result) => {
     if (result) {
       console.log(result);
@@ -131,15 +135,34 @@ app.get("/intervention/:id", (req, res) => {
     res.send(result);
   });
 });
-app.get("/intervention", (req, res) => {
+
+const testingPromise = () => {
   let qr = "select * from intervention";
-  db.query(qr, (err, result) => {
-    res.send(result);
+  // console.log('1',qr)
+  return  new Promise((resolve, reject)=>{
+    db.query(qr, (err, result) => {
+      // console.log(result)
+      if(result){
+        
+        resolve(result)
+      }
+      reject(console.log(err))
+    });
   });
-});
+
+}
+app.get("/intervention",  async(req, res) => {
+  try {
+      const interv = await testingPromise()
+      res.send(interv)
+      
+    } catch (error) {
+      console.log(error);
+    }
+  })
 
 app.post("/intervention", (req, res) => {
-  // console.log(req.body);
+  console.log(req.body);
   // let Numdemande = req.body.Numdemande;
   let Numintervention = req.body.Numintervention;
   let Dureeintervention = req.body.Dureeintervention;
@@ -154,11 +177,12 @@ app.post("/intervention", (req, res) => {
   let Observations = req.body.Observations;
   let Designation = req.body.Designation;
   let Quantite = req.body.Quantite;
-  let Dateremiseenservice = req.body.Dateremiseenservice;
+  let  Dateremiseenservice=req.body.Dateremiseenservice
+  
 
   let qr = `INSERT INTO intervention( Numintervention, Dureeintervention, Techniciensintervenants, 
     Equipement, Marque, Modele, Numserie, serviceaffecter ,DefautConstater, Compterendu, 
-    Observations, Designation,Quantite ,Dateremiseenservice) 
+    Observations, Designation,Quantite, Dateremiseenservice ) 
     VALUES (${Numintervention},
       ${Dureeintervention},
       '${Techniciensintervenants}',
@@ -172,11 +196,12 @@ app.post("/intervention", (req, res) => {
     '${Observations}',
     '${Designation}',
     ${Quantite},
-    '${Dateremiseenservice}')`;
+    '${Dateremiseenservice}'
+    )`;
   db.query(qr, (err, result) => {
     if (result) return res.send(result);
     return res.send(err);
-    // res.send(result);
+    //  res.send(result);
   });
 });
 app.get("/devis", (req, res) => {
@@ -272,5 +297,6 @@ app.post("/travaux", (req, res) => {
     // res.send(result);
   });
 });
+
 port = 3000;
 app.listen(port);

@@ -1,6 +1,8 @@
-<div class="container rounded bg-white mt-5 mb-5">
+<div class="container rounded bg-white mt-5 mb-5" id="print-me">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
     <div class="row">
-        <h5>HOPITAL UNIVERSITAIRE .......... </h5>
+        <h6>HOPITAL UNIVERSITAIRE FARHET HACHED SOUSSE </h6>
         <h6>Direction Technique </h6>
         <div class="titre">  <h5>Date  </h5>  <input id="date" type="date" >
 
@@ -47,6 +49,8 @@
                 </div>
                
                 <button (click)=" addtra()" class="btn btn-success"  >Enregistrer</button>
+                <button  type ="submit" class="btn btn-primary" printSectionId="print-me" ngxPrint><i class="fa-solid fa-print"></i> Imprimer </button>
+
             </div>
         </div>
         <div class="titre"><h5>Direction Technique </h5>

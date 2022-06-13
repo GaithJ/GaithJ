@@ -21,6 +21,9 @@ import { ControleComponent } from './controle/controle.component';
 import { DepannageComponent } from './reception des travaux/depannage.component';
 import { DevisComponent } from './devis/devis.component';
 import { EquipementParServiceComponent } from './equipement-par-service/equipement-par-service.component';
+import { FichesComponent } from './fiches/fiches.component';
+import { MesaagesComponent } from './mesaages/mesaages.component';
+import { NgxPrintModule } from 'ngx-print';
 
 
 
@@ -50,6 +53,8 @@ import { EquipementParServiceComponent } from './equipement-par-service/equipeme
     DepannageComponent,
     DevisComponent,
     EquipementParServiceComponent,
+    FichesComponent,
+    MesaagesComponent,
     
    
     
@@ -58,7 +63,8 @@ import { EquipementParServiceComponent } from './equipement-par-service/equipeme
     BrowserModule,
     AppRoutingModule,
     FormsModule ,
-    HttpClientModule
+    HttpClientModule,
+    NgxPrintModule
   ],
   providers: [],
   bootstrap: [AppComponent]

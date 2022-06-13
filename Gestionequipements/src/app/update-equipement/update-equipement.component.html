@@ -6,9 +6,13 @@
       <div class="formulair">
         <div class="f1">
           <div class="col-sm-4 col-md-4 col-lg-4">
-        <label >NInv Equipement  </label>
-        <input type="number" [(ngModel)]="currentEquipement[0].NInv" name="nInvEquipement" class="form-control">
-          </div>
+            <label >id Equipement  </label>
+            <input type="number" [(ngModel)]="currentEquipement[0].id" name="idEquipement" class="form-control">
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <label >NumInventaire Equipement  </label>
+                <input type="number" [(ngModel)]="currentEquipement[0].NumInventaire" name="numInventaireEquipement" class="form-control">
+                  </div>
           <div class="col-sm-4 col-md-4 col-lg-4" >
         <label >Famille Equipement </label>
         <input type="text"[(ngModel)]= "currentEquipement[0].Famille" name="familleEquipement" class="form-control">

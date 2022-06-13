@@ -5,6 +5,7 @@
 .Utilisateur {
   margin-top: 10px;
   width: 0%;
+  
 }
 
 .dropbtn {
@@ -102,7 +103,7 @@ li img {
 }
 
 .right {
-  float: right !important;
+  margin-left: 200px;
 }
 
 .left {

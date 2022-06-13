@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { Categorie } from '../model/categorie';
+
 import { equipement } from '../model/equipement';
 import {  service } from '../model/service';
 import { EquipementService } from '../services/equipement.service';
@@ -11,12 +11,10 @@ import { EquipementService } from '../services/equipement.service';
   styleUrls: ['./add-equipement.component.css']
 })
 export class AddEquipementComponent implements OnInit {
-  newEquipement = new equipement(0,'','','','',0,'',new Date,'','',0,'');
+  newEquipement = new equipement(0,'','','','','','','',new Date,'','',0,'');
   message  : string | undefined;
    selectedValue! :service[] ;
-  // categories : Categorie[] | undefined;
-  newIdCat : any
-  // newCategorie : Categorie | undefined
+ 
   equipements: equipement[] | undefined;
   lservice!:service[];
  service!:service[]
@@ -26,7 +24,7 @@ export class AddEquipementComponent implements OnInit {
 
    ngOnInit(): void {
  this.getservice()
-  //   this.categories=this.equipementservice.listeCategories();
+
   }
   selected(){
     // this.newEquipement.service = this.selectedValue.valueOf()
@@ -37,9 +35,9 @@ export class AddEquipementComponent implements OnInit {
  
   addequipement(){
     //this.selected()
-    // this.newCategorie = this.equipementservice.consulterCategorie(this.newIdCat);
+    
   return this.equipementservice.addequipement(this.newEquipement).subscribe(res=>{this.equipements=res
-    // this.equipementservice.ajouetrequipement(this.newEquipement);
+   
     this.message = "Equipement "+ this.newEquipement.Nom+" ajouté avec succès";
     this.router.navigate(['/equipements'])
     }) 

@@ -1,0 +1,40 @@
+<div class="container">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <h1>Mes fiches</h1>
+  <div class="card shadow mb-4" >
+    <div class="card-body">
+      <table class="table table-striped"  >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Technicien intervenant</th>
+            <th>Equipement</th>
+            <th>Marque</th>
+            <th>Modele</th>
+            <th>N°ser</th>
+            <th>Date remise en service </th>
+
+            
+          </tr>
+        </thead>
+            <tbody *ngFor="let intervention of fiches"  >
+              <tr   >
+                <td>{{ intervention.Numdemande }}</td>
+                <td>{{ intervention.Techniciensintervenants }}</td>
+                <td>{{ intervention.Equipement }}</td>
+                <td>{{ intervention.Marque }}</td>
+                <td>{{ intervention.Modele }}</td>
+                <td>{{ intervention.Numserie }}</td>
+                <td>{{ intervention.  Dateremiseenservice | date:'dd/MM/yyyy'}}</td>
+
+
+                <!-- <button type ="submit" class="btn btn-primary" printSectionId="print-me" ngxPrint><i class="fa-solid fa-print"></i> Imprimer </button> -->
+              
+              </tr>
+            </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,3 @@
-import { ThisReceiver } from "@angular/compiler";
 
 export class intervention {
     Numdemande:number;

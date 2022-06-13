@@ -1,5 +1,7 @@
 body {
-    background: rgb(99, 39, 120)
+    background: rgb(99, 39, 120);
+    padding: 50px;
+    
 }
 
 .form-control:focus {
@@ -30,6 +32,7 @@ body {
 .back:hover {
     color: #682773;
     cursor: pointer
+    
 }
 
 .labels {

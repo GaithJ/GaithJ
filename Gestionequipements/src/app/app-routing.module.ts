@@ -17,6 +17,8 @@ import { ControleComponent } from './controle/controle.component';
 import { DepannageComponent } from './reception des travaux/depannage.component';
 import { DevisComponent } from './devis/devis.component';
 import { EquipementParServiceComponent } from './equipement-par-service/equipement-par-service.component';
+import { FichesComponent } from './fiches/fiches.component';
+import { MesaagesComponent } from './mesaages/mesaages.component';
 
 
 const routes: Routes = [
@@ -36,7 +38,10 @@ const routes: Routes = [
   {path:"controle",component:ControleComponent},
   {path:"depannage",component:DepannageComponent},
   {path:"devis",component:DevisComponent},
-  {path:"equip",component:EquipementParServiceComponent}
+  {path:"equip",component:EquipementParServiceComponent},
+  {path:"fiches",component:FichesComponent},
+  {path:"messages",component:MesaagesComponent}
+
 
 
  
