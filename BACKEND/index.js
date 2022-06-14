@@ -121,15 +121,15 @@ app.put("/mylist/:id", (req, res) => {
  
 });
 app.delete("/mylist/:id", (req, res) => {
-  let NInv = req.params.id;
-  let qr = `DELETE FROM mylist where NInv= ${NInv} `;
+  let id = req.params.id;
+  let qr = `DELETE FROM mylist where id= ${id} `;
   db.query(qr, (err, result) => {
     res.send(result);
   });
 });
 app.get("/intervention/:id", (req, res) => {
-  let Numdemande = req.params.id;
-  let qr = `select * from intervention where Numdemande= ${Numdemande} `;
+  let id = req.params.id;
+  let qr = `select * from intervention where id= ${id} `;
   db.query(qr, (err, result) => {
     console.log(result);
     res.send(result);
@@ -225,8 +225,8 @@ app.post("/devis", (req, res) => {
 });
 
 app.get("/devis/:id", (req, res) => {
-  let id = req.params.id;
-  let qr = `select * from devis where id= ${id} `;
+  let ID = req.params.ID;
+  let qr = `select * from devis where ID= ${ID} `;
   db.query(qr, (err, result) => {
     console.log(result);
     res.send(result);
